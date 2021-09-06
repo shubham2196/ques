@@ -1,0 +1,17 @@
+.scoreBoard{
+    /* width: 60vw; */
+    /* margin: 5vh auto; */
+    margin-top: 10vh;
+}
+.scoreContainer{
+    width: 25vh;
+    height: 25vh;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 100%;
+    border: 10px solid rgb(101, 101, 243);
+}
+.scores{
+    position: relative;
+    padding-top: 5vh;
+}
