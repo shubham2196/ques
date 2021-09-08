@@ -90,44 +90,16 @@ export class Quiz extends Component {
                   onChange={this.handleOptionChange}
                   className="optionsGroup"
                 >
-                  <FormControlLabel
-                    value="0"
-                    control={<Radio />}
-                    label={
-                      this.props.quizList[this.state.questionNumber].options[0]
-                        .option
-                    }
-                    className="option"
-                  />
-                  <FormControlLabel
-                    value="1"
-                    control={<Radio />}
-                    label={
-                      this.props.quizList[this.state.questionNumber].options[1]
-                        .option
-                    }
-                    className="option"
-                    style={{ fontSize: "40px" }}
-                  />
-                  <FormControlLabel
-                    value="2"
-                    control={<Radio />}
-                    label={
-                      this.props.quizList[this.state.questionNumber].options[2]
-                        .option
-                    }
-                    className="option"
-                  />
-
-                  <FormControlLabel
-                    value="3"
-                    label={
-                      this.props.quizList[this.state.questionNumber].options[3]
-                        .option
-                    }
-                    control={<Radio />}
-                    className="option"
-                  />
+                  {this.props.quizList[this.state.questionNumber].options.map(
+                    (opt, index) => (
+                      <FormControlLabel
+                        value={index.toString()}
+                        label={opt.option}
+                        control={<Radio />}
+                        className="option"
+                      />
+                    )
+                  )}
                 </RadioGroup>
               </FormControl>
             </div>
